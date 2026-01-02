@@ -159,8 +159,8 @@ class CoolUtil
 		@crowplexus
 	**/
 	@:access(flixel.util.FlxSave.validate)
-	inline public static function getSavePath():String {
-		final company:String = FlxG.stage.application.meta.get('company');
+	inline public static function getSavePath(?companyArg:String):String {
+		final company:String = companyArg ?? FlxG.stage.application.meta.get('company');
 		// #if (flixel < "5.0.0") return company; #else
 		return '${company}/${flixel.util.FlxSave.validate(FlxG.stage.application.meta.get('file'))}';
 		// #end
