@@ -17,7 +17,13 @@ class MainMenuState extends MusicBeatState
 	public static var psychEngineVersion(get, never):String; // This is also used for Discord RPC
 
 	static function get_psychEngineVersion():String
-		return Application.current.meta.get('version');
+	{
+		try {
+			return Application.current.meta.get('version');
+		} catch(e) {
+			return '0.0.0 ($e)';
+		}
+	}
 
 	public static var curSelected:Int = 0;
 	public static var curColumn:MainMenuColumn = CENTER;

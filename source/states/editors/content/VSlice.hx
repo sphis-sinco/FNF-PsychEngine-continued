@@ -314,7 +314,10 @@ class VSlice
 		return pack;
 	}
 
-	static var generatedBy:String = 'Psych Engine Continued v${MainMenuState.psychEngineVersion} - Chart Editor V-Slice Exporter';
+	static var generatedBy(get, never):String;
+	
+	static function get_generatedBy():String
+		return 'Psych Engine Continued v${MainMenuState.psychEngineVersion} - Chart Editor V-Slice Exporter';
 
 	public static function export(songData:SwagSong, ?difficultyName:String = null):VSlicePackage
 	{
