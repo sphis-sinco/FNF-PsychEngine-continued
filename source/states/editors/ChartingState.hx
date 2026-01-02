@@ -3210,7 +3210,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 			}
 			if(loadedChart == null || !Reflect.hasField(loadedChart, 'song')) //Check if chart is ACTUALLY a chart and valid
 			{
-				showOutput('Error: File loaded is not a Psych Engine/FNF 0.2.x.x chart.', true);
+				showOutput('Error: File loaded is not a valid chart.', true);
 				return;
 			}
 
@@ -3349,7 +3349,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 					var loadedChart:SwagSong = Song.parseJSON(fileDialog.data, filePath.substr(filePath.lastIndexOf('/')));
 					if(loadedChart == null || !Reflect.hasField(loadedChart, 'song')) //Check if chart is ACTUALLY a chart and valid
 					{
-						showOutput('Error: File loaded is not a Psych Engine/FNF 0.2.x.x chart.', true);
+						showOutput('Error: File loaded is not a valid chart.', true);
 						return;
 					}
 
@@ -3428,7 +3428,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 								var loadedChart:SwagSong = Song.parseJSON(File.getContent(path), autosaveName, null);
 								if(loadedChart == null || !Reflect.hasField(loadedChart, '__original_path'))
 								{
-									showOutput('Error: File loaded is not a valid Psych Engine autosave.', true);
+									showOutput('Error: File loaded is not a valid autosave.', true);
 									return;
 	
 								}
@@ -3482,7 +3482,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 						var eventsFile:SwagSong = Song.parseJSON(fileDialog.data, filePath.substr(filePath.lastIndexOf('/')));
 						if(eventsFile == null || Reflect.hasField(eventsFile, 'scrollSpeed') || eventsFile.events == null)
 						{
-							showOutput('Error: File loaded is not a Psych Engine chart/events file.', true);
+							showOutput('Error: File loaded is not a valid chart/events file.', true);
 							return;
 						}
 	
@@ -3734,7 +3734,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 				var loadedChart:SwagSong = Song.parseJSON(fileDialog.data, filePath.substr(filePath.lastIndexOf('/')));
 				if(loadedChart == null || !Reflect.hasField(loadedChart, 'song')) //Check if chart is ACTUALLY a chart and valid
 				{
-					showOutput('Error: File loaded is not a Psych Engine 0.x.x/FNF 0.2.x.x chart.', true);
+					showOutput('Error: File loaded is not a valid Psych Engine 0.x.x/FNF 0.2.x.x chart.', true);
 					return;
 				}
 
@@ -3985,7 +3985,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 					var loadedChart:SwagSong = Song.parseJSON(fileDialog.data, filePath, '');
 					if(loadedChart == null || !Reflect.hasField(loadedChart, 'song')) //Check if chart is ACTUALLY a chart and valid
 					{
-						showOutput('Error: File loaded is not a Psych Engine 0.x.x/FNF 0.2.x.x chart.', true);
+						showOutput('Error: File loaded is not a valid Psych Engine 0.x.x/FNF 0.2.x.x chart.', true);
 						return;
 					}
 

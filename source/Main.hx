@@ -90,7 +90,7 @@ class Main extends Sprite
 		#end
 		Mods.loadTopMod();
 
-		FlxG.save.bind('funkin', CoolUtil.getSavePath());
+		FlxG.save.bind('PsychEngineContinued', CoolUtil.getSavePath());
 		Highscore.load();
 
 		#if HSCRIPT_ALLOWED
@@ -222,7 +222,7 @@ class Main extends Sprite
 		dateNow = dateNow.replace(" ", "_");
 		dateNow = dateNow.replace(":", "'");
 
-		path = "./crash/" + "PsychEngine_" + dateNow + ".txt";
+		path = "./crash/" + "PsychEngineContinued_" + dateNow + ".txt";
 
 		for (stackItem in callStack)
 		{
@@ -239,7 +239,7 @@ class Main extends Sprite
 		// remove if you're modding and want the crash log message to contain the link
 		// please remember to actually modify the link for the github page to report the issues to.
 		#if officialBuild
-		errMsg += "\nPlease report this error to the GitHub page: https://github.com/ShadowMario/FNF-PsychEngine";
+		errMsg += "\nPlease report this error to the GitHub page: https://github.com/sphis-sinco/FNF-PsychEngine-continued";
 		#end
 		errMsg += "\n\n> Crash Handler written by: sqirra-rng";
 
