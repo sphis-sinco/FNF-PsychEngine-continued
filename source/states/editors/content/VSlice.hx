@@ -314,6 +314,8 @@ class VSlice
 		return pack;
 	}
 
+	static var generatedBy:String = 'Psych Engine Continued v${MainMenuState.psychEngineVersion} - Chart Editor V-Slice Exporter';
+
 	public static function export(songData:SwagSong, ?difficultyName:String = null):VSlicePackage
 	{
 		var events:Array<VSliceEvent> = [];
@@ -329,7 +331,6 @@ class VSlice
 		}
 
 		var notes:Array<VSliceNote> = [];
-		var generatedBy:String = 'Psych Engine Continued v${MainMenuState.psychEngineVersion} - Chart Editor V-Slice Exporter';
 		var timeChanges:Array<VSliceTimeChange> = [];
 		
 		var time:Float = 0;
