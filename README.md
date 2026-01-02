@@ -47,5 +47,3 @@ There you can learn how to use the 212 PlayState funcions in your mod!
 # New Features
 
 Nothing Yet...
-
-#### Psych Engine by ShadowMario, Friday Night Funkin' by ninjamuffin99
